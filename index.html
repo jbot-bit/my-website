@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Fearnehough - SC Diesel Tuning Exposed</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #000;
+            color: #fff;
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: #ff0000;
+        }
+
+        .subtitle {
+            color: #999;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .location {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 3rem;
+            letter-spacing: 0.1em;
+        }
+
+        .intro {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border-left: 4px solid #ff0000;
+            background: #111;
+        }
+
+        .story {
+            list-style: none;
+            counter-reset: story-counter;
+            margin-bottom: 4rem;
+        }
+
+        .story li {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            padding-left: 4rem;
+            position: relative;
+            counter-increment: story-counter;
+        }
+
+        .story li::before {
+            content: counter(story-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ff0000;
+            line-height: 1;
+        }
+
+        .highlight {
+            color: #ff0000;
+            font-weight: 700;
+        }
+
+        .numbers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .number-box {
+            text-align: center;
+            padding: 2rem;
+            border: 2px solid #333;
+        }
+
+        .number-box:hover {
+            border-color: #ff0000;
+        }
+
+        .big-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #ff0000;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .number-label {
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        .evidence {
+            margin: 4rem 0;
+        }
+
+        .evidence h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #ff0000;
+        }
+
+        .evidence-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .evidence-item {
+            padding: 1rem;
+            border: 1px solid #333;
+            font-size: 0.9rem;
+            color: #999;
+            text-align: center;
+        }
+
+        .proof {
+            background: #111;
+            padding: 2rem;
+            margin: 3rem 0;
+            border-left: 4px solid #ff0000;
+        }
+
+        .proof h3 {
+            color: #ff0000;
+            margin-bottom: 1rem;
+        }
+
+        .proof ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .proof li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .proof li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #ff0000;
+        }
+
+        .cta {
+            margin-top: 4rem;
+            text-align: center;
+            padding: 3rem 2rem;
+            background: #111;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #ff0000;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .cta-btn {
+            padding: 1.2rem 2.5rem;
+            background: #ff0000;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1rem;
+        }
+
+        .cta-btn:hover {
+            background: #cc0000;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 1.5rem; }
+            .story li { padding-left: 3rem; }
+            .story li::before { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Ben Fearnehough</h1>
+    <div class="subtitle">SC Diesel Tuning / Sunshine Coast Diesel Tuning</div>
+    <div class="location">3 COMMERCE AVE, BOKARINA QLD 4575</div>
+
+    <div class="intro">
+        I paid <strong>$12,795.55</strong> for performance work on my VW Golf R. What happened next is documented fraud, coercion, and potentially criminal conduct by Ben Fearnehough operating as "SC Diesel Tuning" on the Sunshine Coast.
+    </div>
+
+    <ol class="story">
+        <li>Found Ben's ad on Facebook Marketplace. Agreed to a ~$10k build for Stage 2 tune with valved exhaust. Quoted <span class="highlight">"1-2 days"</span> turnaround.</li>
+
+        <li>Paid <span class="highlight">$11,166.21</span> upfront on May 2, 2025. Car dropped off June 12.</li>
+
+        <li>Days of delays. On June 17, Ben claims the driveshaft bearing failed "during exhaust removal." Wants <span class="highlight">$2,954</span> for replacement. No inspection allowed.</li>
+
+        <li>Discovered Ben added <span class="highlight">unauthorized parts</span> to invoice: 4-bar MAP sensor ($300), fuel pump ($580), oil additive ($125). Never discussed. Never approved.</li>
+
+        <li>Ben <span class="highlight">refused to return my vehicle</span> unless I signed a waiver, deleted reviews, and paid for his alleged driveshaft damage. Blocked me on messenger.</li>
+
+        <li>Filed QCAT claim June 19. Paid remaining $1,629 June 21. Ben still refused release, demanding <span class="highlight">"written collection plan"</span> and threatening storage fees.</li>
+
+        <li>June 27: Had to call <span class="highlight">police to retrieve my own car</span>. Police retrieved keys. Arranged tow truck immediately - Ben told police car was "not roadworthy."</li>
+
+        <li>Independent inspection confirmed: <span class="highlight">driveshaft was broken</span>. $3,500 repair. Parts Ben claimed to "dispose of" were <span class="highlight">still in my boot</span>. Charged me $80 disposal fee anyway.</li>
+
+        <li>Car returned with <span class="highlight">no tune installed</span> - still on stock tune despite being charged $1,200 for ECU tune and $900 for DSG tune. Aftermarket parts installed but no software.</li>
+
+        <li>Ben falsely posted on Google claiming I have a <span class="highlight">"known history with police"</span> and engaged in "defamatory conduct and trespass." I have a clean National Police Certificate dated June 12, 2025.</li>
+
+        <li>October 1, 2025: QCAT mediation. Ben refused all resolution and <span class="highlight">threatened to countersue me for $40,000</span> for "defamation" unless I dropped my claim.</li>
+
+        <li>The kicker: Ben's personal ABN was <span class="highlight">cancelled November 14, 2017</span>. He resigned as director of Kaioken Holdings in <span class="highlight">June 2023</span>. Still operating and issuing invoices under "SC Diesel Tuning" in 2025.</li>
+    </ol>
+
+    <div class="numbers">
+        <div class="number-box">
+            <span class="big-number">$12,795</span>
+            <div class="number-label">Paid in Full</div>
+        </div>
+        <div class="number-box">
+            <span class="big-number">$0</span>
+            <div class="number-label">Work Completed</div>
+        </div>
+        <div class="number-box">
+            <span class="big-number">$3,500</span>
+            <div class="number-label">Vehicle Damage</div>
+        </div>
+        <div class="number-box">
+            <span class="big-number">8 Years</span>
+            <div class="number-label">Cancelled ABN</div>
+        </div>
+    </div>
+
+    <div class="proof">
+        <h3>The Dodgy Shit (Documented)</h3>
+        <ul>
+            <li>Charged $80 "disposal fee" for parts left in my car</li>
+            <li>Billed 1.5hrs for oil change (it's a 20min job)</li>
+            <li>Added $125 oil additive without consent or disclosure</li>
+            <li>Edited invoices AFTER disputes to insert fake justifications</li>
+            <li>Claimed I "requested DSG cancellation" - no such message exists</li>
+            <li>Refused vehicle inspection before or after taking my money</li>
+            <li>Demanded waiver of all rights as condition of vehicle release</li>
+            <li>Issued tax invoices under cancelled ABN (invalid for 8 years)</li>
+            <li>Operating after resigning as director (June 2023)</li>
+        </ul>
+    </div>
+
+    <div class="evidence">
+        <h2>All Evidence Documented</h2>
+        <div class="evidence-list">
+            <div class="evidence-item">✓ Bank Statements</div>
+            <div class="evidence-item">✓ Tax Invoices (Invalid ABN)</div>
+            <div class="evidence-item">✓ Damage Photos</div>
+            <div class="evidence-item">✓ ASIC Records</div>
+            <div class="evidence-item">✓ ABN Lookup (Cancelled 2017)</div>
+            <div class="evidence-item">✓ Police Reports (QP2501091516)</div>
+            <div class="evidence-item">✓ Independent Mechanic Report</div>
+            <div class="evidence-item">✓ Parts in Boot Photos</div>
+            <div class="evidence-item">✓ Email Chains</div>
+            <div class="evidence-item">✓ Messenger Logs</div>
+            <div class="evidence-item">✓ QCAT Documents (Q8833-25)</div>
+            <div class="evidence-item">✓ Defamatory Google Responses</div>
+        </div>
+    </div>
+
+    <div class="cta">
+        <h2>Report This</h2>
+        <p style="margin-bottom: 2rem; color: #999;">This is active fraud and potentially criminal conduct</p>
+        <div class="cta-buttons">
+            <a href="tel:137468" class="cta-btn">QLD Fair Trading: 13 74 68</a>
+            <a href="tel:1300302502" class="cta-btn">ACCC: 1300 302 502</a>
+            <a href="tel:1300300630" class="cta-btn">ASIC: 1300 300 630</a>
+            <a href="https://www.qld.gov.au/law/fair-trading" target="_blank" class="cta-btn">File Complaint Online</a>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>QCAT Case #Q8833-25</strong> | <strong>Police Report #QP2501091516</strong></p>
+        <p style="margin-top: 1rem;">Verify ABN cancellation: abr.business.gov.au → Search "Benjamin John Fearnehough" ABN 25 510 379 182</p>
+        <p style="margin-top: 1rem;">All claims documented and submitted to QLD authorities</p>
+    </footer>
+</body>
+</html>
